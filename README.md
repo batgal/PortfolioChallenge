@@ -22,4 +22,4 @@ THEN I am taken to that deployed application
 WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 
-![alt text](https://github.com/batgal/PortfolioChallenge/tree/main/images/Screen%20Shot%202022-05-18%20at%202.26.25%20PM.png?raw=true)
+![screenshot](./images/screenShot.png)
