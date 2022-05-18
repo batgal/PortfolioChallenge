@@ -17,10 +17,6 @@ nav ul {
   justify-content: space-evenly;
 }
 
-img {
-  align-content: center;
-}
-
 h1 {
   color: aliceblue;
   font-size: 20px;
@@ -54,15 +50,12 @@ section {
   --white: #e0eae4;
   --pink: #e9a2eb;
 }
-
-/* set content highlight color and background */
 ::selection {
   background-color: var(--yellow);
   color: var(--blue);
 }
 
 body {
-  /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
@@ -86,7 +79,6 @@ h6 {
 }
 
 h1 {
-  /* 4rem = 40px (4 * 10px) */
   font-size: 4rem;
 }
 
@@ -114,16 +106,8 @@ p {
   margin-bottom: 1rem;
 }
 
-code {
-  /* Monospace font stack is used for our code blocks to make it look more like code */
-  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
-    "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
-    "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
-    monospace;
-}
-
 header {
-  width: 150%;
+  width: 90%;
   margin: 0 auto;
   padding: 2.5rem;
   text-align: center;
@@ -151,7 +135,6 @@ footer {
   text-align: center;
 }
 
-/* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
 .banner {
   height: 150px;
   width: 100%;
@@ -160,6 +143,17 @@ footer {
   background: url(./images/Galaxy-pink.jpeg);
   background-size: cover;
   background-position: center;
+}
+.pfp {
+  height: 700px;
+  width: 40%;
+  background: url(./images/pfp.jpeg);
+  margin-top: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .row {
   display: flex;
@@ -210,53 +204,28 @@ footer {
   transition: all 0.5s ease-in-out;
 }
 
-/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
 .infoCard:hover,
 .infoCard:hover .cardHeader {
   box-shadow: inset 0px 0px 8px var(--pink), 0 0 15px var(--pink);
 }
 
-/* each card's code block grows to the height of the largest code block on the page, making each card even in height */
 .infoCard .code-block {
   flex-grow: 1;
 }
 
 .infoCard pre {
-  /* set styles to make it so code wraps in <pre> instead of overflowing */
   white-space: pre-wrap;
   overflow: visible;
   tab-size: 4;
   padding: 1.2rem 1rem;
   color: var(--white);
   border-radius: 50px;
-  /* use linear-gradient() function to create a fading background  */
-
   display: flex;
   align-items: center;
 }
-
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
-  /* on tablets, set columns to only be 50% of the width and not grow */
-  .cardColumn {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  /* select the last child to grow to full width if it has space to grow */
-  .cardColumn:last-child {
-    flex-grow: 1;
-  }
-}
-
-/* media query for larger screens */
-@media screen and (min-width: 992px) {
-  header {
-    width: 75%;
-  }
-
-  .cardColumn {
-    flex: 0 0 33.333%;
-    max-width: 100%;
-  }
+embed:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  box-shadow: inset 0px 0px 8px var(--pink), 0 0 15px var(--pink);
 }
